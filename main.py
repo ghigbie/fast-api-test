@@ -8,5 +8,5 @@ app = FastAPI()
 app.include_router(blog_get.router)
 app.include_router(blog_post.router)
 app.include_router(base_get.router)
-base = "/v1/api/"
+
 

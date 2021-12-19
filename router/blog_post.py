@@ -1,4 +1,6 @@
+from typing import Optional
 from fastapi import APIRouter
+from models.blog import BlogModel
 
 router = APIRouter(
   prefix='/blog',
@@ -6,5 +8,6 @@ router = APIRouter(
 )
 
 @router.post('/new')
-def create_blog():
-  pass
+def create_blog(blog: BlogModel):
+  return {'message': 'blog created', 
+          'blog': blog}
