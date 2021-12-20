@@ -1,8 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 
-class BlogModel(BaseModel):
+class CommentModel(BaseModel):
   title: str
-  content: str
-  nb_comments: Optional[int]
+  body: str
   published: Optional[bool]
